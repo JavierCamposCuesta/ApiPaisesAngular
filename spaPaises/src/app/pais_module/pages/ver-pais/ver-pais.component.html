@@ -1,0 +1,11 @@
+
+<div class="border-right p-3" id="">
+  <h3 class="text-dark">
+   Por País
+  </h3>
+  <hr class="text-body"/>
+  <input type="text" class="form-control" placeholder="Buscar país..." [(ngModel)]="busqueda" name="busqueda" (keyup.enter)="pasarBusqueda()">
+  <hr class="text-body"/>
+  <router-outlet></router-outlet>
+</div>
+
