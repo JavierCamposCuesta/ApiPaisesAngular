@@ -24,14 +24,16 @@ export class PorPaisComponent implements OnInit {
   buscar(busqueda :string){
     this.busqueda = busqueda;
     this.servicio.buscarPaises(this.busqueda)
-    .subscribe(resp=>
+    .subscribe({next: resp=>
       {
         this.paises = resp;
         this.error = false;
         console.log(this.paises);
       },
+      error:
       (err) =>{
         this.error = true;
-      })
+      }})
+    
   }
 }

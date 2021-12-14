@@ -12,6 +12,7 @@ export class PorCapitalComponent implements OnInit {
   constructor(private servicio:PaisesServiceService) { }
   paises: SearchRESTCountries[] = [];
   busqueda: string = '';
+  error: boolean = false;
 
   ngOnInit(): void {
   }
@@ -23,11 +24,16 @@ export class PorCapitalComponent implements OnInit {
   buscar(busqueda :string){
     this.busqueda = busqueda;
     this.servicio.buscarPaisesCapital(this.busqueda)
-    .subscribe(resp=>
+    .subscribe({next: resp=>
       {
         this.paises = resp;
+        this.error = false;
         console.log(this.paises);
-      })
+      },
+      error:
+      (err) =>{
+        this.error = true;
+      }})
   }
 
 }

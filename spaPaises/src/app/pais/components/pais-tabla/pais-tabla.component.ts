@@ -9,6 +9,8 @@ import { SearchRESTCountries } from 'src/app/pais_module/interfaces/countries.in
 })
 export class PaisTablaComponent implements OnInit {
   @Input() countries: SearchRESTCountries[] = [];
+  @Input() error: boolean= false;
+  @Input() busqueda: string='';
   constructor() { }
 
   ngOnInit(): void {
