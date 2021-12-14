@@ -8,15 +8,12 @@ import { PaisesServiceService } from '../../services/paises-service.service';
 })
 export class VerPaisComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private servicio:PaisesServiceService) {
-    console.log(route.snapshot.params['id'])
-  }
+  constructor() { }
+
   ngOnInit(): void {
   }
 
-  busqueda:string = "";
+  
 
-  pasarBusqueda(){
-    this.servicio.buscarPaises(this.busqueda);
-  }
+
 }

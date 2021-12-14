@@ -1,10 +1,29 @@
 
-<div class="border-right p-3" id="sidebar">
+
   <h3 class="text-dark">
    Búsqueda
   </h3>
   <hr class="text-dark"/>
-  <div class="btn-group-vertical">
+  <ul class="list-group">
+    <li 
+    class="list-group-item"
+    routerLink="" 
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact:true}">
+        Buscar país
+    </li>
+    <li class="list-group-item"
+    routerLink="region"
+    routerLinkActive="active">
+        Por región
+    </li>
+    <li class="list-group-item"
+    routerLink="capital"
+    routerLinkActive="active">
+        Por capital
+    </li>
+</ul>
+  <!-- <div class="btn-group-vertical">
     <div class=" btn-group-vertical " role="group" aria-label="Basic radio toggle button group">
       <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
       <label class="btn btn-outline-primary" for="btnradio1">Por País</label>
@@ -15,7 +34,7 @@
       <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
       <label class="btn btn-outline-primary" for="btnradio3">Por Capital</label>
     </div>
-  </div>
+  </div> -->
   
 
-</div>
+
